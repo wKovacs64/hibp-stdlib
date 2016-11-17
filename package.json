@@ -1,0 +1,17 @@
+{
+  "name": "hibp",
+  "version": "1.0.0-dev.0",
+  "description": "Functions for querying the 'Have I been pwned?' API.",
+  "author": "Justin Hall <justin.r.hall@gmail.com>",
+  "main": "f/breachedAccount/index.js",
+  "dependencies": {
+    "hibp": "^3.0.0"
+  },
+  "private": true,
+  "stdlib": {
+    "name": "wKovacs64/hibp",
+    "defaultFunction": "breachedAccount",
+    "timeout": 10000,
+    "publish": false
+  }
+}

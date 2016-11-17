@@ -1,0 +1,15 @@
+{
+  "name": "breachedAccount",
+  "description": "fetches all breach data for an account",
+  "args": [
+    "account"
+  ],
+  "kwargs": {
+    "account": "a username or email address",
+    "domain": "a domain by which to filter the results (default: all domains)",
+    "truncate": "truncate the results to only include the name of each breach (default: false)"
+  },
+  "http": {
+    "headers": {}
+  }
+}
