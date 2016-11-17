@@ -185,8 +185,55 @@ dataClasses({}, (err, data) => {
 });
 ```
 
+### pasteAccount - fetches all pastes for an email address
+
+##### Parameters
+
+* `email`: the email address to query (required)
+
+##### Data Returned
+
+See the [paste model][apipastemodel] section of the API documentation for a
+description of the data returned.
+
+##### Usage
+
+###### Command-line:
+
+Return a JSON object with paste information for the specified account:
+
+```bash
+$ f wKovacs64/hibp/pasteAccount --email foo@bar.com
+```
+
+Shorthand for the same request:
+
+```bash
+$ f wKovacs64/hibp/pasteAccount foo@bar.com
+```
+
+###### HTTP:
+
+Return a JSON object with paste information for the specified account:
+
+```http
+https://f.stdlib.com/wKovacs64/hibp/pasteAccount?email=foo@bar.com
+```
+
+###### Web and Node.js:
+
+```js
+const f = require('f');
+const pasteAccount = f('wKovacs64/hibp/pasteAccount');
+
+pasteAccount({ email: 'foo@bar.com' }, (err, data) => {
+  // handle error or JSON data
+});
+```
+
 [hibp]: https://github.com/wKovacs64/hibp
 [stdlib]: https://stdlib.com
 [haveibeenpwned]: https://haveibeenpwned.com
 [apibreachmodel]: https://haveibeenpwned.com/api/v2#BreachModel
 [apidataclasses]: https://haveibeenpwned.com/API/v2#AllDataClasses
+[apipastemodel]: https://haveibeenpwned.com/API/v2#PasteModel

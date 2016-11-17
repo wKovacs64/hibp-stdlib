@@ -1,0 +1,13 @@
+{
+  "name": "pasteAccount",
+  "description": "fetches all pastes for an email address",
+  "args": [
+    "email"
+  ],
+  "kwargs": {
+    "email": "the email address to query"
+  },
+  "http": {
+    "headers": {}
+  }
+}
