@@ -103,6 +103,50 @@ breaches({}, (err, data) => {
 });
 ```
 
+### breach - fetches breach data for a single breach
+
+##### Parameters
+
+* `breachName`: the name of a breach in the system
+
+##### Data Returned
+
+See the [breach model][apibreachmodel] section of the API documentation for a
+description of the data returned.
+
+##### Usage
+
+###### Command-line:
+
+Return a JSON object with breach information for the specified breach:
+
+```bash
+$ f wKovacs64/hibp/breach --breachName Adobe
+```
+
+Shorthand for the same request:
+
+```bash
+$ f wKovacs64/hibp/breach Adobe
+```
+
+###### HTTP:
+
+```http
+https://f.stdlib.com/wKovacs64/hibp/breach?breachName=Adobe
+```
+
+###### Web and Node.js:
+
+```js
+const f = require('f');
+const breach = f('wKovacs64/hibp/breach');
+
+breach({ breachName: 'Adobe' }, (err, data) => {
+  // handle error or JSON data
+});
+```
+
 [hibp]: https://github.com/wKovacs64/hibp
 [stdlib]: https://stdlib.com
 [haveibeenpwned]: https://haveibeenpwned.com

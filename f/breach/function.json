@@ -1,0 +1,13 @@
+{
+  "name": "breach",
+  "description": "fetches breach data for a single breach",
+  "args": [
+    "breachName"
+  ],
+  "kwargs": {
+    "breachName": "the name of a breach in the system"
+  },
+  "http": {
+    "headers": {}
+  }
+}
