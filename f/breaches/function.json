@@ -1,0 +1,10 @@
+{
+  "name": "breaches",
+  "description": "fetches all breach data in the system",
+  "kwargs": {
+    "domain": "a domain by which to filter the results (default: all domains)"
+  },
+  "http": {
+    "headers": {}
+  }
+}
