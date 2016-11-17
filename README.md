@@ -147,7 +147,46 @@ breach({ breachName: 'Adobe' }, (err, data) => {
 });
 ```
 
+### dataClasses - fetches all data classes in the system
+
+##### Parameters
+
+* *none*
+
+##### Data Returned
+
+See the [data classes][apidataclasses] section of the API documentation for a
+description of the data returned.
+
+##### Usage
+
+###### Command-line:
+
+Return a JSON object with all data classes:
+
+```bash
+$ f wKovacs64/hibp/dataClasses
+```
+
+###### HTTP:
+
+```http
+https://f.stdlib.com/wKovacs64/hibp/dataClasses
+```
+
+###### Web and Node.js:
+
+```js
+const f = require('f');
+const dataClasses = f('wKovacs64/hibp/dataClasses');
+
+dataClasses({}, (err, data) => {
+  // handle error or JSON data
+});
+```
+
 [hibp]: https://github.com/wKovacs64/hibp
 [stdlib]: https://stdlib.com
 [haveibeenpwned]: https://haveibeenpwned.com
 [apibreachmodel]: https://haveibeenpwned.com/api/v2#BreachModel
+[apidataclasses]: https://haveibeenpwned.com/API/v2#AllDataClasses
