@@ -1,6 +1,6 @@
 {
   "name": "pasteAccount",
-  "description": "fetches all pastes for an email address",
+  "description": "Fetches all pastes for an email address.",
   "args": [
     "email"
   ],

@@ -1,6 +1,6 @@
 {
   "name": "breach",
-  "description": "fetches breach data for a single breach",
+  "description": "Fetches breach data for a single breach.",
   "args": [
     "breachName"
   ],

@@ -1,8 +1,18 @@
-# [hibp][hibp]-driven microservice for [stdlib][stdlib]
+# [hibp][hibp] microservice on [stdlib][stdlib]
 
 *Functions for querying the '[Have I been pwned?][haveibeenpwned]' API.*
 
-### breachedAccount - fetches all breach data for an account
+* [breachedAccount](#breachedaccount)
+* [breaches](#breaches)
+* [breach](#breach)
+* [dataClasses](#dataclasses)
+* [pasteAccount](#pasteaccount)
+
+## breachedAccount
+
+##### Description
+
+Fetches all breach data for an account.
 
 ##### Parameters
 
@@ -57,7 +67,11 @@ breachedAccount({ account: 'foo' }, (err, data) => {
 });
 ```
 
-### breaches - fetches all breach data in the system
+## breaches
+
+##### Description
+
+Fetches all breach data in the system.
 
 ##### Parameters
 
@@ -103,7 +117,11 @@ breaches({}, (err, data) => {
 });
 ```
 
-### breach - fetches breach data for a single breach
+## breach
+
+##### Description
+
+Fetches breach data for a single breach.
 
 ##### Parameters
 
@@ -147,7 +165,11 @@ breach({ breachName: 'Adobe' }, (err, data) => {
 });
 ```
 
-### dataClasses - fetches all data classes in the system
+## dataClasses
+
+##### Description
+
+Fetches all data classes in the system.
 
 ##### Parameters
 
@@ -185,7 +207,11 @@ dataClasses({}, (err, data) => {
 });
 ```
 
-### pasteAccount - fetches all pastes for an email address
+## pasteAccount
+
+##### Description
+
+Fetches all pastes for an email address.
 
 ##### Parameters
 

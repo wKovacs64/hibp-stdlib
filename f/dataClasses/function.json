@@ -1,6 +1,6 @@
 {
   "name": "dataClasses",
-  "description": "fetches all data classes in the system",
+  "description": "Fetches all data classes in the system.",
   "http": {
     "headers": {}
   }

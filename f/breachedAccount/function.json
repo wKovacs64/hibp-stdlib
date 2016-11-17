@@ -1,6 +1,6 @@
 {
   "name": "breachedAccount",
-  "description": "fetches all breach data for an account",
+  "description": "Fetches all breach data for an account.",
   "args": [
     "account"
   ],
