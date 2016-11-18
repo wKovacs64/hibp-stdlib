@@ -257,9 +257,21 @@ pasteAccount({ email: 'foo@bar.com' }, (err, data) => {
 });
 ```
 
+## ✍ Author's Note
+
+There's a good chance this project adds no value. I primarily did it as an
+introduction to microservices on [stdlib][stdlib]. The current access methods
+probably have superior, preexisting alternatives:
+
+* Command-line: [pwned][pwned] is more flexible and extensible.
+* HTTP: Just query the [API][api] endpoints directly?
+* Web and Node.js: [hibp][hibp] powers this microservice. Use that.
+
 [hibp]: https://github.com/wKovacs64/hibp
+[pwned]: https://github.com/wKovacs64/pwned
 [stdlib]: https://stdlib.com
 [haveibeenpwned]: https://haveibeenpwned.com
+[api]: https://haveibeenpwned.com/API/v2
 [apibreachmodel]: https://haveibeenpwned.com/api/v2#BreachModel
 [apidataclasses]: https://haveibeenpwned.com/API/v2#AllDataClasses
 [apipastemodel]: https://haveibeenpwned.com/API/v2#PasteModel
