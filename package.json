@@ -7,11 +7,11 @@
   "dependencies": {
     "hibp": "^3.0.0"
   },
-  "private": true,
+  "private": false,
   "stdlib": {
     "name": "wKovacs64/hibp",
     "defaultFunction": "breachedAccount",
     "timeout": 10000,
-    "publish": false
+    "publish": true
   }
 }
