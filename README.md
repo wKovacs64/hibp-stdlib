@@ -43,14 +43,11 @@ $ f wKovacs64/hibp/breachedAccount --account foo --truncate true
 
 ###### HTTP:
 
-Return a JSON object with breach information for the specified account:
-
 ```http
 https://f.stdlib.com/wKovacs64/hibp/breachedAccount?account=foo
 ```
 
-Return a JSON object with breach information for the specified account, limited
-to a specific domain:
+Limit to a specific domain:
 
 ```http
 https://f.stdlib.com/wKovacs64/hibp/breachedAccount?account=foo&domain=adobe.com
@@ -86,21 +83,17 @@ description of the data returned.
 
 ###### Command-line:
 
-Return a JSON object with all breach data:
-
 ```bash
 $ f wKovacs64/hibp/breaches
 ```
 
-Filter the results by domain:
+Filter by domain:
 
 ```bash
 $ f wKovacs64/hibp/breaches --domain adobe.com
 ```
 
 ###### HTTP:
-
-Return a JSON object with all breach data:
 
 ```http
 https://f.stdlib.com/wKovacs64/hibp/breaches
@@ -135,8 +128,6 @@ description of the data returned.
 ##### Usage
 
 ###### Command-line:
-
-Return a JSON object with breach information for the specified breach:
 
 ```bash
 $ f wKovacs64/hibp/breach --breachName Adobe
@@ -184,8 +175,6 @@ description of the data returned.
 
 ###### Command-line:
 
-Return a JSON object with all data classes:
-
 ```bash
 $ f wKovacs64/hibp/dataClasses
 ```
@@ -226,8 +215,6 @@ description of the data returned.
 
 ###### Command-line:
 
-Return a JSON object with paste information for the specified account:
-
 ```bash
 $ f wKovacs64/hibp/pasteAccount --email foo@bar.com
 ```
@@ -239,8 +226,6 @@ $ f wKovacs64/hibp/pasteAccount foo@bar.com
 ```
 
 ###### HTTP:
-
-Return a JSON object with paste information for the specified account:
 
 ```http
 https://f.stdlib.com/wKovacs64/hibp/pasteAccount?email=foo@bar.com
