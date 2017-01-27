@@ -5,7 +5,7 @@
   "author": "Justin Hall <justin.r.hall@gmail.com>",
   "main": "f/breachedAccount/index.js",
   "dependencies": {
-    "hibp": "^4.0.0"
+    "hibp": "^4.1.1"
   },
   "private": false,
   "stdlib": {

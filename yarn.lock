@@ -20,20 +20,20 @@ follow-redirects@1.0.0:
   dependencies:
     debug "^2.2.0"
 
-hibp@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/hibp/-/hibp-4.0.0.tgz#6ae117de55832359faaca531f94ef4a6efaab47a"
+hibp@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/hibp/-/hibp-4.1.1.tgz#d8aaabd94382421dca72585d0316e9b051f47062"
   dependencies:
     axios "^0.15.3"
-    source-map-support "^0.4.6"
+    source-map-support "^0.4.8"
 
 ms@0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
 
-source-map-support@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.6.tgz#32552aa64b458392a85eab3b0b5ee61527167aeb"
+source-map-support@^0.4.8:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.10.tgz#d7b19038040a14c0837a18e630a196453952b378"
   dependencies:
     source-map "^0.5.3"
 
