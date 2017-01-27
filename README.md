@@ -17,8 +17,10 @@ Fetches all breach data for an account.
 ##### Parameters
 
 * `account`: a username or email address (required)
-* `domain`: a domain by which to filter the results (optional, default: all domains)
-* `truncate`: truncate the results to only include the name of each breach (optional, default: false)
+* `domain`: a domain by which to filter the results (optional, default: all
+   domains)
+* `truncate`: truncate the results to only include the name of each breach
+   (optional, default: false)
 
 ##### Data Returned
 
@@ -32,32 +34,32 @@ description of the data returned.
 Return a JSON object with breach information for the specified account:
 
 ```bash
-$ f wKovacs64/hibp/breachedAccount --account foo
+$ lib wKovacs64.hibp.breachedAccount --account foo
 ```
 
 Truncate the same results to just the breach names:
 
 ```bash
-$ f wKovacs64/hibp/breachedAccount --account foo --truncate true
+$ lib wKovacs64.hibp.breachedAccount --account foo --truncate true
 ```
 
 ###### HTTP:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/breachedAccount?account=foo
+https://wkovacs64.stdlib.com/hibp/breachedAccount?account=foo
 ```
 
 Limit to a specific domain:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/breachedAccount?account=foo&domain=adobe.com
+https://wkovacs64.stdlib.com/hibp/breachedAccount?account=foo&domain=adobe.com
 ```
 
 ###### Web and Node.js:
 
 ```js
-const f = require('f');
-const breachedAccount = f('wKovacs64/hibp/breachedAccount');
+const lib = require('lib');
+const { breachedAccount } = lib.wKovacs64.hibp;
 
 breachedAccount({ account: 'foo' }, (err, data) => {
   // handle error or JSON data
@@ -72,7 +74,8 @@ Fetches all breach data in the system.
 
 ##### Parameters
 
-* `domain`: a domain by which to filter the results (optional, default: all domains)
+* `domain`: a domain by which to filter the results (optional, default: all
+  domains)
 
 ##### Data Returned
 
@@ -84,26 +87,26 @@ description of the data returned.
 ###### Command-line:
 
 ```bash
-$ f wKovacs64/hibp/breaches
+$ lib wKovacs64.hibp.breaches
 ```
 
 Filter by domain:
 
 ```bash
-$ f wKovacs64/hibp/breaches --domain adobe.com
+$ lib wKovacs64.hibp.breaches --domain adobe.com
 ```
 
 ###### HTTP:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/breaches
+https://wkovacs64.stdlib.com/hibp/breaches
 ```
 
 ###### Web and Node.js:
 
 ```js
-const f = require('f');
-const breaches = f('wKovacs64/hibp/breaches');
+const lib = require('lib');
+const { breaches } = lib.wKovacs64.hibp;
 
 breaches({}, (err, data) => {
   // handle error or JSON data
@@ -130,26 +133,26 @@ description of the data returned.
 ###### Command-line:
 
 ```bash
-$ f wKovacs64/hibp/breach --breachName Adobe
+$ lib wKovacs64.hibp.breach --breachName Adobe
 ```
 
 Shorthand for the same request:
 
 ```bash
-$ f wKovacs64/hibp/breach Adobe
+$ lib wKovacs64.hibp.breach Adobe
 ```
 
 ###### HTTP:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/breach?breachName=Adobe
+https://wkovacs64.stdlib.com/hibp/breach?breachName=Adobe
 ```
 
 ###### Web and Node.js:
 
 ```js
-const f = require('f');
-const breach = f('wKovacs64/hibp/breach');
+const lib = require('lib');
+const { breach } = lib.wKovacs64.hibp;
 
 breach({ breachName: 'Adobe' }, (err, data) => {
   // handle error or JSON data
@@ -176,20 +179,20 @@ description of the data returned.
 ###### Command-line:
 
 ```bash
-$ f wKovacs64/hibp/dataClasses
+$ lib wKovacs64.hibp.dataClasses
 ```
 
 ###### HTTP:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/dataClasses
+https://wkovacs64.stdlib.com/hibp/dataClasses
 ```
 
 ###### Web and Node.js:
 
 ```js
-const f = require('f');
-const dataClasses = f('wKovacs64/hibp/dataClasses');
+const lib = require('lib');
+const { dataClasses } = lib.wKovacs64.hibp;
 
 dataClasses({}, (err, data) => {
   // handle error or JSON data
@@ -216,26 +219,26 @@ description of the data returned.
 ###### Command-line:
 
 ```bash
-$ f wKovacs64/hibp/pasteAccount --email foo@bar.com
+$ lib wKovacs64.hibp.pasteAccount --email foo@bar.com
 ```
 
 Shorthand for the same request:
 
 ```bash
-$ f wKovacs64/hibp/pasteAccount foo@bar.com
+$ lib wKovacs64.hibp.pasteAccount foo@bar.com
 ```
 
 ###### HTTP:
 
 ```http
-https://f.stdlib.com/wKovacs64/hibp/pasteAccount?email=foo@bar.com
+https://wkovacs64.stdlib.com/hibp/pasteAccount?email=foo@bar.com
 ```
 
 ###### Web and Node.js:
 
 ```js
-const f = require('f');
-const pasteAccount = f('wKovacs64/hibp/pasteAccount');
+const lib = require('lib');
+const { pasteAccount } = lib.wKovacs64.hibp;
 
 pasteAccount({ email: 'foo@bar.com' }, (err, data) => {
   // handle error or JSON data
