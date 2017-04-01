@@ -3,7 +3,7 @@
   "version": "2.0.1-dev.0",
   "description": "Functions for querying the 'Have I been pwned?' API.",
   "author": "Justin Hall <justin.r.hall@gmail.com>",
-  "main": "f/breachedAccount/index.js",
+  "main": "functions/breachedAccount/index.js",
   "dependencies": {
     "hibp": "^4.1.1"
   },
