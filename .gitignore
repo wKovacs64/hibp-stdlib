@@ -147,5 +147,5 @@ fabric.properties
 sftp-config.json
 
 
-### Polybit stdlib ###
+### StdLib ###
 env.json
