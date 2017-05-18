@@ -1,14 +1,11 @@
 const hibp = require('hibp');
 
-module.exports = (params, callback) => {
+module.exports = async (params) => {
   const email = params.args.length ? params.args[0] : params.kwargs.account;
 
   if (email === undefined) {
-    callback('You must specify an email address.');
-  } else {
-    hibp
-      .pasteAccount(email)
-      .then(data => callback(null, data))
-      .catch(callback);
+    throw new Error('You must specify an email address.');
   }
+
+  return hibp.pasteAccount(email);
 };

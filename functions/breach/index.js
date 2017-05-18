@@ -1,14 +1,11 @@
 const hibp = require('hibp');
 
-module.exports = (params, callback) => {
+module.exports = async (params) => {
   const name = params.args.length ? params.args[0] : params.kwargs.breachName;
 
   if (name === undefined) {
-    callback('You must specify a breach name.');
-  } else {
-    hibp
-      .breach(name)
-      .then(data => callback(null, data))
-      .catch(callback);
+    throw new Error('You must specify a breach name.');
   }
+
+  return hibp.breach(name);
 };
