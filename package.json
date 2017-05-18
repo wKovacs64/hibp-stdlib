@@ -4,8 +4,18 @@
   "description": "Functions for querying the 'Have I been pwned?' API.",
   "author": "Justin Hall <justin.r.hall@gmail.com>",
   "main": "functions/breachedAccount/index.js",
+  "scripts": {
+    "lint": "eslint functions"
+  },
   "dependencies": {
     "hibp": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1"
   },
   "private": false,
   "stdlib": {
