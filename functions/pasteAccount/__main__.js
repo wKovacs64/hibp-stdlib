@@ -6,10 +6,4 @@ const hibp = require('hibp');
  * @param {string} email the email address to query
  * @returns {any} an array of paste objects (or null if no pastes were found)
  */
-module.exports = async (email) => {
-  if (email === undefined) {
-    throw new Error('You must specify an email address.');
-  }
-
-  return hibp.pasteAccount(email);
-};
+module.exports = async email => hibp.pasteAccount(email);

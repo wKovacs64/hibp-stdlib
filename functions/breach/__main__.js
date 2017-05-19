@@ -7,10 +7,4 @@ const hibp = require('hibp');
  * @returns {any} an object representing breach data (or null if no breach was
  * found)
  */
-module.exports = async (breachName) => {
-  if (breachName === undefined) {
-    throw new Error('You must specify a breach name.');
-  }
-
-  return hibp.breach(breachName);
-};
+module.exports = async breachName => hibp.breach(breachName);

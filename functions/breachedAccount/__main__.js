@@ -10,10 +10,6 @@ const hibp = require('hibp');
  * each breach (default: false)
  * @returns {any} an array of breach objects (or null if no breaches were found)
  */
-module.exports = async (account, domain = '', truncate = false) => {
-  if (account === undefined) {
-    throw new Error('You must specify an account or email address.');
-  }
-
-  return hibp.breachedAccount(account, { domain, truncate });
-};
+module.exports = async (account, domain = '', truncate = false) => (
+  hibp.breachedAccount(account, { domain, truncate })
+);
