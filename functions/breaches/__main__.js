@@ -8,4 +8,4 @@ const hibp = require('hibp');
  * @returns {array} an array of breach objects (an empty array if no breaches
  * were found)
  */
-module.exports = async domain => hibp.breaches({ domain });
+module.exports = async (domain = '') => hibp.breaches({ domain });
