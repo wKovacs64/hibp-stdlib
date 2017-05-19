@@ -1,4 +1,4 @@
-# [hibp][hibp] microservice on [stdlib][stdlib]
+# [hibp][hibp] microservice on [StdLib][stdlib]
 
 *Functions for querying the '[Have I been pwned?][haveibeenpwned]' API.*
 
@@ -46,13 +46,13 @@ $ lib wKovacs64.hibp.breachedAccount --account foo --truncate true
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breachedAccount?account=foo
+https://wkovacs64.stdlib.com/hibp/breachedAccount/?account=foo
 ```
 
 Limit to a specific domain:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breachedAccount?account=foo&domain=adobe.com
+https://wkovacs64.stdlib.com/hibp/breachedAccount/?account=foo&domain=adobe.com
 ```
 
 ###### Web and Node.js:
@@ -61,9 +61,13 @@ https://wkovacs64.stdlib.com/hibp/breachedAccount?account=foo&domain=adobe.com
 const lib = require('lib');
 const { breachedAccount } = lib.wKovacs64.hibp;
 
-breachedAccount({ account: 'foo' }, (err, data) => {
-  // handle error or JSON data
-});
+breachedAccount({ account: 'foo' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
 ```
 
 ## breaches
@@ -99,7 +103,7 @@ $ lib wKovacs64.hibp.breaches --domain adobe.com
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breaches
+https://wkovacs64.stdlib.com/hibp/breaches/
 ```
 
 ###### Web and Node.js:
@@ -108,9 +112,13 @@ https://wkovacs64.stdlib.com/hibp/breaches
 const lib = require('lib');
 const { breaches } = lib.wKovacs64.hibp;
 
-breaches({}, (err, data) => {
-  // handle error or JSON data
-});
+breaches()
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
 ```
 
 ## breach
@@ -145,7 +153,7 @@ $ lib wKovacs64.hibp.breach Adobe
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breach?breachName=Adobe
+https://wkovacs64.stdlib.com/hibp/breach/?breachName=Adobe
 ```
 
 ###### Web and Node.js:
@@ -154,9 +162,13 @@ https://wkovacs64.stdlib.com/hibp/breach?breachName=Adobe
 const lib = require('lib');
 const { breach } = lib.wKovacs64.hibp;
 
-breach({ breachName: 'Adobe' }, (err, data) => {
-  // handle error or JSON data
-});
+breach({ breachName: 'Adobe' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
 ```
 
 ## dataClasses
@@ -185,7 +197,7 @@ $ lib wKovacs64.hibp.dataClasses
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/dataClasses
+https://wkovacs64.stdlib.com/hibp/dataClasses/
 ```
 
 ###### Web and Node.js:
@@ -194,9 +206,14 @@ https://wkovacs64.stdlib.com/hibp/dataClasses
 const lib = require('lib');
 const { dataClasses } = lib.wKovacs64.hibp;
 
-dataClasses({}, (err, data) => {
-  // handle error or JSON data
-});
+dataClasses()
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
+
 ```
 
 ## pasteAccount
@@ -231,7 +248,7 @@ $ lib wKovacs64.hibp.pasteAccount foo@bar.com
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/pasteAccount?email=foo@bar.com
+https://wkovacs64.stdlib.com/hibp/pasteAccount/?email=foo@bar.com
 ```
 
 ###### Web and Node.js:
@@ -240,15 +257,19 @@ https://wkovacs64.stdlib.com/hibp/pasteAccount?email=foo@bar.com
 const lib = require('lib');
 const { pasteAccount } = lib.wKovacs64.hibp;
 
-pasteAccount({ email: 'foo@bar.com' }, (err, data) => {
-  // handle error or JSON data
-});
+pasteAccount({ email: 'foo@bar.com' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
 ```
 
 ## ✍ Author's Note
 
 There's a good chance this project adds no value. I primarily did it as an
-introduction to microservices on [stdlib][stdlib]. The current access methods
+introduction to microservices on [StdLib][stdlib]. The current access methods
 probably have superior, preexisting alternatives:
 
 * Command-line: [pwned][pwned] is more flexible and extensible.
