@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 3.0.1 *(2017-05-18)*
+
+* Fixed `domain` parameter of `breaches()` function to be optional as intended
+* Updated examples in documentation
+
 ## Version 3.0.0 *(2017-05-18)*
 
 * Updated to be [FaaSlang](https://github.com/faaslang/faaslang) compliant
