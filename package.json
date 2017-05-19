@@ -1,6 +1,6 @@
 {
   "name": "hibp",
-  "version": "3.0.0-dev.0",
+  "version": "3.0.0",
   "description": "Functions for querying the 'Have I been pwned?' API.",
   "author": "Justin Hall <justin.r.hall@gmail.com>",
   "main": "functions/__main__.js",
