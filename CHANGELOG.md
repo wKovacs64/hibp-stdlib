@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 3.1.0 *(2017-08-06)*
+
+* Added new `pwnedPassword` and `search` functions
+* Updated HTTP endpoint links to use new lib.id domain
+
 ## Version 3.0.1 *(2017-05-18)*
 
 * Fixed `domain` parameter of `breaches()` function to be optional as intended
