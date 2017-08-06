@@ -2,11 +2,61 @@
 
 *Functions for querying the '[Have I been pwned?][haveibeenpwned]' API.*
 
+* [breach](#breach)
 * [breachedAccount](#breachedaccount)
 * [breaches](#breaches)
-* [breach](#breach)
 * [dataClasses](#dataclasses)
 * [pasteAccount](#pasteaccount)
+
+## breach
+
+##### Description
+
+Fetches breach data for a single breach.
+
+##### Parameters
+
+* `breachName`: the name of a breach in the system
+
+##### Data Returned
+
+See the [breach model][apibreachmodel] section of the API documentation for a
+description of the data returned.
+
+##### Usage
+
+###### Command-line:
+
+```bash
+$ lib wKovacs64.hibp.breach --breachName Adobe
+```
+
+Shorthand for the same request:
+
+```bash
+$ lib wKovacs64.hibp.breach Adobe
+```
+
+###### HTTP:
+
+```http
+https://wkovacs64.lib.id/hibp/breach/?breachName=Adobe
+```
+
+###### Web and Node.js:
+
+```js
+const lib = require('lib');
+const { breach } = lib.wKovacs64.hibp;
+
+breach({ breachName: 'Adobe' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
+```
 
 ## breachedAccount
 
@@ -121,56 +171,6 @@ breaches()
   });
 ```
 
-## breach
-
-##### Description
-
-Fetches breach data for a single breach.
-
-##### Parameters
-
-* `breachName`: the name of a breach in the system
-
-##### Data Returned
-
-See the [breach model][apibreachmodel] section of the API documentation for a
-description of the data returned.
-
-##### Usage
-
-###### Command-line:
-
-```bash
-$ lib wKovacs64.hibp.breach --breachName Adobe
-```
-
-Shorthand for the same request:
-
-```bash
-$ lib wKovacs64.hibp.breach Adobe
-```
-
-###### HTTP:
-
-```http
-https://wkovacs64.lib.id/hibp/breach/?breachName=Adobe
-```
-
-###### Web and Node.js:
-
-```js
-const lib = require('lib');
-const { breach } = lib.wKovacs64.hibp;
-
-breach({ breachName: 'Adobe' })
-  .then((data) => {
-    // handle data
-  })
-  .catch((err) => {
-    // handle error
-  });
-```
-
 ## dataClasses
 
 ##### Description
@@ -272,7 +272,7 @@ There's a good chance this project adds no value. I primarily did it as an
 introduction to microservices on [StdLib][stdlib]. The current access methods
 probably have superior, preexisting alternatives:
 
-* Command-line: [pwned][pwned] is more flexible and extensible.
+* Command-line: [pwned][pwned] is more flexible.
 * HTTP: Just query the [API][api] endpoints directly?
 * Web and Node.js: [hibp][hibp] powers this microservice. Use that.
 
