@@ -46,13 +46,13 @@ $ lib wKovacs64.hibp.breachedAccount --account foo --truncate true
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breachedAccount/?account=foo
+https://wkovacs64.lib.id/hibp/breachedAccount/?account=foo
 ```
 
 Limit to a specific domain:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breachedAccount/?account=foo&domain=adobe.com
+https://wkovacs64.lib.id/hibp/breachedAccount/?account=foo&domain=adobe.com
 ```
 
 ###### Web and Node.js:
@@ -103,7 +103,7 @@ $ lib wKovacs64.hibp.breaches --domain adobe.com
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breaches/
+https://wkovacs64.lib.id/hibp/breaches/
 ```
 
 ###### Web and Node.js:
@@ -153,7 +153,7 @@ $ lib wKovacs64.hibp.breach Adobe
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/breach/?breachName=Adobe
+https://wkovacs64.lib.id/hibp/breach/?breachName=Adobe
 ```
 
 ###### Web and Node.js:
@@ -197,7 +197,7 @@ $ lib wKovacs64.hibp.dataClasses
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/dataClasses/
+https://wkovacs64.lib.id/hibp/dataClasses/
 ```
 
 ###### Web and Node.js:
@@ -248,7 +248,7 @@ $ lib wKovacs64.hibp.pasteAccount foo@bar.com
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/hibp/pasteAccount/?email=foo@bar.com
+https://wkovacs64.lib.id/hibp/pasteAccount/?email=foo@bar.com
 ```
 
 ###### Web and Node.js:
