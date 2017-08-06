@@ -1,4 +1,4 @@
-const hibp = require('hibp');
+const { breachedAccount } = require('hibp');
 
 /**
  * Fetches breach data for the specified account.
@@ -11,5 +11,5 @@ const hibp = require('hibp');
  * @returns {any} an array of breach objects (or null if no breaches were found)
  */
 module.exports = async (account, domain = '', truncate = false) => (
-  hibp.breachedAccount(account, { domain, truncate })
+  breachedAccount(account, { domain, truncate })
 );

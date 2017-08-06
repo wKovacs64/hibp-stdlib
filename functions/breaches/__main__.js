@@ -1,4 +1,4 @@
-const hibp = require('hibp');
+const { breaches } = require('hibp');
 
 /**
  * Fetches all breached sites in the system.
@@ -8,4 +8,4 @@ const hibp = require('hibp');
  * @returns {array} an array of breach objects (an empty array if no breaches
  * were found)
  */
-module.exports = async (domain = '') => hibp.breaches({ domain });
+module.exports = async (domain = '') => breaches({ domain });

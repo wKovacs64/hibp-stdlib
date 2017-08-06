@@ -1,4 +1,4 @@
-const hibp = require('hibp');
+const { breach } = require('hibp');
 
 /**
  * Fetches breach data for a single breach.
@@ -7,4 +7,4 @@ const hibp = require('hibp');
  * @returns {any} an object representing breach data (or null if no breach was
  * found)
  */
-module.exports = async breachName => hibp.breach(breachName);
+module.exports = async breachName => breach(breachName);

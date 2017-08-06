@@ -1,4 +1,4 @@
-const hibp = require('hibp');
+const { pwnedPassword } = require('hibp');
 
 /**
  * Fetches the pwned status for the given password, indicating whether or not it
@@ -9,5 +9,5 @@ const hibp = require('hibp');
  * @returns {boolean} whether the password has been exposed in a breach
  */
 module.exports = async (password, sha1 = false) => (
-  hibp.pwnedPassword(password, { isAHash: sha1 })
+  pwnedPassword(password, { isAHash: sha1 })
 );
