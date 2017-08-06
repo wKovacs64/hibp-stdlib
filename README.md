@@ -7,6 +7,7 @@
 * [breaches](#breaches)
 * [dataClasses](#dataclasses)
 * [pasteAccount](#pasteaccount)
+* [search](#search)
 
 ## breach
 
@@ -258,6 +259,72 @@ const lib = require('lib');
 const { pasteAccount } = lib.wKovacs64.hibp;
 
 pasteAccount({ email: 'foo@bar.com' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
+```
+
+## search
+
+##### Description
+
+Fetches all breaches and all pastes associated with a given account.
+
+##### Parameters
+
+* `account`: a username or email address (required)
+* `domain`: a domain by which to filter breach results (optional, default: all
+   domains)
+* `truncate`: truncate the results to only include the name of each breach
+   (optional, default: false)
+
+##### Data Returned
+
+`search` returns a JSON object with a `breaches` key and a `pastes` key. See the
+[breach model][apibreachmodel] and [paste model][apipastemodel] sections of the
+API documentation (respectively) for descriptions of the values of those keys.
+Each value may independently be null if no corresponding data was found.
+
+##### Usage
+
+###### Command-line:
+
+Return a JSON object with breach and paste information for the specified
+account:
+
+```bash
+$ lib wKovacs64.hibp.search --account foo
+```
+
+Return a JSON object with breach and paste information for the specified
+email address:
+
+```bash
+$ lib wKovacs64.hibp.search --account foo@bar.com
+```
+
+###### HTTP:
+
+```http
+https://wkovacs64.lib.id/hibp/search/?account=foo
+```
+
+Limit breach data to a specific domain:
+
+```http
+https://wkovacs64.lib.id/hibp/search/?account=foo&domain=adobe.com
+```
+
+###### Web and Node.js:
+
+```js
+const lib = require('lib');
+const { search } = lib.wKovacs64.hibp;
+
+search({ account: 'foo' })
   .then((data) => {
     // handle data
   })
