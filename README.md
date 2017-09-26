@@ -413,6 +413,8 @@ probably have superior, preexisting alternatives:
 * HTTP: Just query the [API][api] endpoints directly?
 * Web and Node.js: [hibp][hibp] powers this microservice. Use that.
 
+[![Sponsor][sponsor-image]][sponsor-link]
+
 [hibp]: https://github.com/wKovacs64/hibp
 [pwned]: https://github.com/wKovacs64/pwned
 [stdlib]: https://stdlib.com
@@ -422,3 +424,5 @@ probably have superior, preexisting alternatives:
 [apidataclasses]: https://haveibeenpwned.com/API/v2#AllDataClasses
 [apipastemodel]: https://haveibeenpwned.com/API/v2#PasteModel
 [apipwnedpassword]: https://haveibeenpwned.com/api/v2#PwnedPasswords
+[sponsor-image]: https://app.codesponsor.io/embed/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/hibp-stdlib.svg
+[sponsor-link]: https://app.codesponsor.io/link/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/hibp-stdlib
