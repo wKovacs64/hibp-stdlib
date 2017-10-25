@@ -413,7 +413,11 @@ probably have superior, preexisting alternatives:
 * HTTP: Just query the [API][api] endpoints directly?
 * Web and Node.js: [hibp][hibp] powers this microservice. Use that.
 
+---
+
 [![Sponsor][sponsor-image]][sponsor-link]
+
+---
 
 [hibp]: https://github.com/wKovacs64/hibp
 [pwned]: https://github.com/wKovacs64/pwned
