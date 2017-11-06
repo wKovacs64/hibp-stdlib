@@ -5,8 +5,8 @@
   "author": "Justin Hall <justin.r.hall@gmail.com>",
   "main": "functions/__main__.js",
   "scripts": {
-    "format": "prettier --write \"functions/**/*.js\"",
-    "lint": "eslint functions"
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "eslint ."
   },
   "dependencies": {
     "hibp": "^5.2.0"
