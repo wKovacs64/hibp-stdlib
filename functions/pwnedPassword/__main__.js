@@ -8,6 +8,5 @@ const { pwnedPassword } = require('hibp');
  * @param {boolean} sha1 the pre-hashed password is a hash (default: false)
  * @returns {boolean} whether the password has been exposed in a breach
  */
-module.exports = async (password, sha1 = false) => (
-  pwnedPassword(password, { isAHash: sha1 })
-);
+module.exports = async (password, sha1 = false) =>
+  pwnedPassword(password, { isAHash: sha1 });

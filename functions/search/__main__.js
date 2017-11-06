@@ -10,6 +10,5 @@ const { search } = require('hibp');
  * each breach (default: false)
  * @returns {any} a JSON object with a breaches key and a pastes key
  */
-module.exports = async (account, domain = '', truncate = false) => (
-  search(account, { domain, truncate })
-);
+module.exports = async (account, domain = '', truncate = false) =>
+  search(account, { domain, truncate });
