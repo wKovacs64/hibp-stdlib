@@ -1,6 +1,6 @@
 # [hibp][hibp] microservice on [StdLib][stdlib]
 
-*Functions for querying the '[Have I been pwned?][haveibeenpwned]' API.*
+_Functions for querying the '[Have I been pwned?][haveibeenpwned]' API._
 
 * [breach](#breach)
 * [breachedAccount](#breachedaccount)
@@ -52,10 +52,10 @@ const lib = require('lib');
 const { breach } = lib.wKovacs64.hibp;
 
 breach({ breachName: 'Adobe' })
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
@@ -70,9 +70,9 @@ Fetches all breach data for an account.
 
 * `account`: a username or email address (required)
 * `domain`: a domain by which to filter the results (optional, default: all
-   domains)
+  domains)
 * `truncate`: truncate the results to only include the name of each breach
-   (optional, default: false)
+  (optional, default: false)
 
 ##### Data Returned
 
@@ -114,10 +114,10 @@ const lib = require('lib');
 const { breachedAccount } = lib.wKovacs64.hibp;
 
 breachedAccount({ account: 'foo' })
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
@@ -165,10 +165,10 @@ const lib = require('lib');
 const { breaches } = lib.wKovacs64.hibp;
 
 breaches()
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
@@ -181,7 +181,7 @@ Fetches all data classes in the system.
 
 ##### Parameters
 
-* *none*
+* _none_
 
 ##### Data Returned
 
@@ -209,13 +209,12 @@ const lib = require('lib');
 const { dataClasses } = lib.wKovacs64.hibp;
 
 dataClasses()
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
-
 ```
 
 ## pasteAccount
@@ -260,10 +259,10 @@ const lib = require('lib');
 const { pasteAccount } = lib.wKovacs64.hibp;
 
 pasteAccount({ email: 'foo@bar.com' })
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
@@ -273,8 +272,8 @@ pasteAccount({ email: 'foo@bar.com' })
 ##### Description
 
 Fetches the pwned status for the given password, indicating whether or not it
-has been previously exposed in a breach. See the
-[Pwned Passwords][apipwnedpassword] section of the API documentation for more
+has been previously exposed in a breach. See the [Pwned
+Passwords][apipwnedpassword] section of the API documentation for more
 information.
 
 ##### Parameters
@@ -329,10 +328,10 @@ const lib = require('lib');
 const { pwnedPassword } = lib.wKovacs64.hibp;
 
 pwnedPassword({ password: 'Password1234' })
-  .then((isPwned) => {
+  .then(isPwned => {
     // handle result
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
@@ -347,9 +346,9 @@ Fetches all breaches and all pastes associated with a given account.
 
 * `account`: a username or email address (required)
 * `domain`: a domain by which to filter breach results (optional, default: all
-   domains)
+  domains)
 * `truncate`: truncate the results to only include the name of each breach
-   (optional, default: false)
+  (optional, default: false)
 
 ##### Data Returned
 
@@ -369,8 +368,8 @@ account:
 $ lib wKovacs64.hibp.search --account foo
 ```
 
-Return a JSON object with breach and paste information for the specified
-email address:
+Return a JSON object with breach and paste information for the specified email
+address:
 
 ```bash
 $ lib wKovacs64.hibp.search --account foo@bar.com
@@ -395,10 +394,10 @@ const lib = require('lib');
 const { search } = lib.wKovacs64.hibp;
 
 search({ account: 'foo' })
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```
