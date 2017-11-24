@@ -9,14 +9,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "hibp": "^5.2.0"
+    "hibp": "^5.2.2"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.7.0",
+    "eslint-config-prettier": "^2.8.0",
     "eslint-plugin-import": "^2.8.0",
-    "prettier": "^1.7.4"
+    "prettier": "^1.8.2"
   },
   "private": false,
   "stdlib": {
