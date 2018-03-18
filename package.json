@@ -12,11 +12,11 @@
     "hibp": "^5.2.2"
   },
   "devDependencies": {
-    "eslint": "^4.11.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.8.0",
-    "eslint-plugin-import": "^2.8.0",
-    "prettier": "^1.8.2"
+    "eslint": "4.11.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-config-prettier": "2.8.0",
+    "eslint-plugin-import": "2.8.0",
+    "prettier": "1.8.2"
   },
   "private": false,
   "stdlib": {
