@@ -271,54 +271,33 @@ pasteAccount({ email: 'foo@bar.com' })
 
 ##### Description
 
-Fetches the pwned status for the given password, indicating whether or not it
-has been previously exposed in a breach. See the [Pwned
-Passwords][apipwnedpassword] section of the API documentation for more
-information.
+Securely fetches the number of times the given password has been exposed in a
+breach. See the [Pwned Passwords][apipwnedpasswordrange] section of the API
+documentation for more information.
 
 ##### Parameters
 
-* `password`: a password as a plain text string or SHA1 hash (required)
-* `sha1`: a boolean indicating the pre-hashed password is a hash (optional,
-  default: false)
+* `password`: a password as a plain text string (required)
 
 ##### Data Returned
 
-`pwnedPassword` returns a boolean.
+`pwnedPassword` returns a number.
 
 ##### Usage
 
 ###### Command-line:
 
-Return a boolean corresponding to the pwned status of the specified password:
+Return a number corresponding to the number of times the password has been
+exposed in a breach:
 
 ```bash
 $ lib wKovacs64.hibp.pwnedPassword --password Password1234
-```
-
-Return a boolean corresponding to the pwned status of the specified SHA1 hash:
-
-```bash
-$ lib wKovacs64.hibp.pwnedPassword --password 5e447cbeee6f483bf88c461d76994b0063ae81d5
-```
-
-Override the [remote API's SHA1 hash auto-detection][apipwnedpassword] and
-specify that the password is actually a SHA1 hash:
-
-```bash
-$ lib wKovacs64.hibp.pwnedPassword --password 5e447cbeee6f483bf88c461d76994b0063ae81d5 --sha1 true
 ```
 
 ###### HTTP:
 
 ```http
 https://wkovacs64.lib.id/hibp/pwnedPassword/?password=Password1234
-```
-
-Specify a literal SHA1 password:
-
-```http
-https://wkovacs64.lib.id/hibp/pwnedPassword/?password=5e447cbeee6f483bf88c461d76994b0063ae81d5&sha1=true
 ```
 
 ###### Web and Node.js:
@@ -328,7 +307,7 @@ const lib = require('lib');
 const { pwnedPassword } = lib.wKovacs64.hibp;
 
 pwnedPassword({ password: 'Password1234' })
-  .then(isPwned => {
+  .then(pwnCount => {
     // handle result
   })
   .catch(err => {
@@ -420,4 +399,4 @@ probably have superior, preexisting alternatives:
 [apibreachmodel]: https://haveibeenpwned.com/api/v2#BreachModel
 [apidataclasses]: https://haveibeenpwned.com/API/v2#AllDataClasses
 [apipastemodel]: https://haveibeenpwned.com/API/v2#PasteModel
-[apipwnedpassword]: https://haveibeenpwned.com/api/v2#PwnedPasswords
+[apipwnedpasswordrange]: https://haveibeenpwned.com/API/v2#SearchingPwnedPasswordsByRange
