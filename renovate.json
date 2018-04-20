@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "docker:disable"],
   "commitMessage": "Update {{depName}} to {{newVersion}}",
   "automergeType": "branch-push",
   "automerge": true,
