@@ -1,3 +1,9 @@
+# [DEPRECATED]
+
+Warning: this project is no longer maintained. Please see [pwned][pwned] for a CLI or [hibp][hibp] for Web and Node.js.
+
+<hr>
+
 # [hibp][hibp] microservice on [StdLib][stdlib]
 
 _Functions for querying the '[Have I been pwned?][haveibeenpwned]' API._
